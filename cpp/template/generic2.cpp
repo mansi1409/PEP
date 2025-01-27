@@ -3,6 +3,7 @@ using namespace std;
 template<class T> T func1(T a, T b){
 T c = a+b;
 return c;
+
 }
 int main(){
 float a =5.3;
