@@ -234,7 +234,6 @@ int main() {
 #include <map>
 #include <string>
 using namespace std;
-
 class Event {
 protected:
     string eventName;
@@ -242,7 +241,6 @@ protected:
     int seats;
     string time;
     string venue;
-
 public:
     Event(string name, string date, int seats, string time, string venue)
         : eventName(name), date(date), seats(seats), time(time), venue(venue) {}

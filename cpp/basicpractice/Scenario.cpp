@@ -20,7 +20,6 @@ struct Order {
     long long timestamp;
     Order(int id, int prio, long long time) : order_id(id), priority(prio), timestamp(time) {}
 };
-
 struct CompareOrder {
     bool operator()(const Order& o1, const Order& o2) {
         if (o1.priority == o2.priority) {
@@ -49,15 +48,12 @@ public:
         std::cout << "Processing Order ID: " << topOrder.order_id << " with Priority: " << topOrder.priority << "\n";
     }
 };
-
 int main() {
     OrderProcessingSystem ops;
-    
     ops.addOrder(101, 2, 1707571234);
     ops.addOrder(102, 1, 1707571200);
     ops.addOrder(103, 3, 1707571300);
     ops.addOrder(104, 3, 1707571100);
-    
     ops.processOrder();
     ops.processOrder();
     ops.processOrder();
